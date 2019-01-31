@@ -74,7 +74,7 @@ jQuery('#message-form').on('submit', function(e){
     e.preventDefault();
 
     const messageTextbox = jQuery('[name=message]')
-    
+
     socket.emit('createMessage', {
         from: 'User',
         text: messageTextbox.val()
@@ -111,17 +111,17 @@ locationButton.on('click',function(){
         return alert('Geo location not supported by your browser');
         }
 
-        locationButton.attr('disabled', 'disabled').text('Sending Location ...');
+        locationButton.attr('disabled', 'disabled').text('보내는 중 ...');
     
     navigator.geolocation.getCurrentPosition(function(position){
-        locationButton.removeAttr('disabled').text('Send Location')
+        locationButton.removeAttr('disabled').text('현재 위치 보내기')
         socket.emit('createLocationMessage',{
             latitude: position.coords.latitude,
             longitude: position.coords.longitude
         });
             
     }, function(){
-        locationButton.text('Send Location');
+        locationButton.text('현재 위치 보내기');
         alert('Unable to fetch location.')
     })
 
