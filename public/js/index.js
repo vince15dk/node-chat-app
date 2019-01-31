@@ -2,7 +2,7 @@ const socket = io();
             
 
 socket.on('connect', function (){
-    console.log('Connected to server');
+    console.log('Connected with server');
 });
 
 socket.on('disconnect', function(){
@@ -11,4 +11,8 @@ socket.on('disconnect', function(){
 
 socket.on('newMessage', function(message){
     console.log('newMessage', message);
+})
+
+socket.on('newJoin', function(message){
+    console.log(message);
 })
