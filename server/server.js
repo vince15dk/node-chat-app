@@ -23,7 +23,7 @@ io.on('connection',(socket)=>{
 
     // socket.emit from admin text Welcome to the chat app
     // socket.broadcast.emit from admin text new user joined
-    socket.emit('newMessage', generateMessage('Admiin', 'Welcome to the chat app'));
+    socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
     
     socket.broadcast.emit('newMessage', generateMessage('Admin', 'New user joined'));
 
