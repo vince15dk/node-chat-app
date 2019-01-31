@@ -47,7 +47,7 @@ io.on('connection',(socket)=>{
         // socket.broadcast.to('the office fans').emit // every one in the room except for the  current user 
         // socket.emit // emit events to specific one user
         
-        socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
+        socket.emit('newMessage', generateMessage('쮸', '혠쮸의 비밀방'));
         socket.broadcast.to(params.room).emit('newMessage', generateMessage('Admin', `${params.name} has joined`));
         callback();
     })
