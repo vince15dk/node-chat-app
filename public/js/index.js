@@ -16,3 +16,13 @@ socket.on('newMessage', function(message){
 socket.on('newJoin', function(message){
     console.log(message);
 })
+
+socket.emit('createMessage', {
+    from: 'Frank',
+    text: 'Hi'
+}, function(message){
+    console.log(message);
+});
+
+
+
