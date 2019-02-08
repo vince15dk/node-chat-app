@@ -1,1 +1,3 @@
-Socket.io application
+Socket.io application (Serverless)
+
+```bash

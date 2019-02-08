@@ -47,7 +47,7 @@ io.on('connection',(socket)=>{
         // socket.broadcast.to('the office fans').emit // every one in the room except for the  current user 
         // socket.emit // emit events to specific one user
         
-        socket.emit('newMessage', generateMessage('쮸', '혠쮸의 비밀방'));
+        socket.emit('newMessage', generateMessage('The Bot', '모든 대화내용 및 현재 위치는 저장되지 않습니다. 비밀을 엄수해 주십시오.'));
         socket.broadcast.to(params.room).emit('newMessage', generateMessage('Admin', `${params.name} has joined`));
         callback();
     })
@@ -78,7 +78,7 @@ io.on('connection',(socket)=>{
 
         if(user){
             io.to(user.room).emit('updateUserList', users.getUserList(user.room));
-            io.to(user.room).emit('newMessage', generateMessage('Admin', `${user.name} has left.`));
+            io.to(user.room).emit('newMessage', generateMessage('The Bot', `${user.name} has left.`));
         }
     })
 
