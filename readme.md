@@ -1,6 +1,8 @@
 
 # `The Secret Place`
 
+<image src="images/collab.png" width=500>
+
 ## Socket.io application (Serverless)
 웹소켓으로 구현한 대화 및 위치 공유 방
 
