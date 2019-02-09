@@ -16,14 +16,14 @@ Being able to test on local port 3000
 * Thes same codename among users leads them directly to the same chatting room (implemantation of socket.join and constraints of io.to(room))
 * Google geolocation API is implemented to share the location of users in live
 
-
+Enjoy!
 
 ### Intall npm dependencies 
 ```bash
 npm install
 ```
 
-### Run testing with Mocah 
+### Run testing with Mocha 
 ```bash
 npm run test-watch
 ```
